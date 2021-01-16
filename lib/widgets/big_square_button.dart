@@ -14,7 +14,7 @@ class BigSquareButton extends StatelessWidget {
       ),
       child: Column(children: <Widget>[
         Container(
-          padding: EdgeInsets.only(top: 10),
+          padding: EdgeInsets.only(top: 30),
           child: Image.network(
             imageUrl,
             fit: BoxFit.cover,
@@ -27,6 +27,7 @@ class BigSquareButton extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
           ),
