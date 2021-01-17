@@ -10,8 +10,8 @@ class CircleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 30),
-      width: 110.0,
-      height: 110.0,
+      width: 120.0,
+      height: 120.0,
       decoration: new BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,

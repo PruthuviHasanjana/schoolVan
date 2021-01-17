@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:school_van/widgets/destination_item.dart';
+import '../constants.dart';
 import '../widgets/add_remove_botton.dart';
-import '../widgets/wide_button.dart';
 
-class SelectRouteScreen extends StatelessWidget {
-  static const String routeName = '/select-route';
+class DestinationScreen extends StatelessWidget {
+  static const String routeName = '/destination';
 
   @override
   Widget build(BuildContext context) {
+    final data = ModalRoute.of(context).settings.arguments as List;
+    final routeType = data[0].toString();
+    final routeName = data[1].toString();
+
     return Scaffold(
         appBar: AppBar(
-          title: Text('Select route'),
+          backgroundColor: kPrimaryColor,
+          title: Text('Destinations'),
         ),
         body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -21,12 +27,12 @@ class SelectRouteScreen extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       width: double.infinity,
-                      height: 245,
+                      height: 200,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Step 01',
+                            'Step 02',
                             style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
@@ -34,7 +40,7 @@ class SelectRouteScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'ada Dina oba yna margaya thoranna.',
+                            'Pick and drop the kids',
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.orange,
@@ -54,53 +60,54 @@ class SelectRouteScreen extends StatelessWidget {
                           ),
                         ),
                         child: Container(
-                          height: 440,
+                          height: 485,
                           padding: EdgeInsets.only(top: 15),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
-                                      'https://picsum.photos/250?image=9',
-                                      'Route 01'),
+                                  child: DestinationItem(
+                                    '',
+                                    'Student 1 name',
+                                    'Arrived',
+                                    Colors.blue,
+                                  ),
                                 ),
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
+                                  child: DestinationItem(
                                       'https://picsum.photos/250?image=9',
-                                      'Route 02'),
+                                      'Student 2 name',
+                                      'Arrived',
+                                      Colors.blue),
                                 ),
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
+                                  child: DestinationItem(
                                       'https://picsum.photos/250?image=9',
-                                      'Route 03'),
+                                      'Student 3 name',
+                                      'Arrived',
+                                      Colors.blue),
                                 ),
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
+                                  child: DestinationItem(
                                       'https://picsum.photos/250?image=9',
-                                      'Route 04'),
+                                      'Student 4 name',
+                                      'Arrived',
+                                      Colors.blue),
                                 ),
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
+                                  child: DestinationItem(
                                       'https://picsum.photos/250?image=9',
-                                      'Route 05'),
+                                      'Student 1 name',
+                                      'Dropped',
+                                      Colors.red),
                                 ),
                                 Container(
-                                  width: 250,
-                                  height: 100,
-                                  child: WideButton(
+                                  child: DestinationItem(
                                       'https://picsum.photos/250?image=9',
-                                      'Route 06'),
+                                      'Student 2 name',
+                                      'Dropped',
+                                      Colors.red),
                                 ),
                               ],
                             ),
@@ -111,7 +118,11 @@ class SelectRouteScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              AddRemoveButton('', 'Add a route', Colors.blue),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: AddRemoveButton('', 'Finished', Colors.green)),
             ]));
   }
 }
