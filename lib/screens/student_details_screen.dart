@@ -73,7 +73,7 @@ class StudentDetailsScreen extends StatelessWidget {
                   //               style: TextStyle(
                   //                 fontSize: getProportionateScreenHeight(18),
                   //                 fontWeight: FontWeight.bold,
-                  //                 color: Colors.white,
+                  //                 colora: Colors.white,
                   //               ),
                   //             ),
                   //           ),

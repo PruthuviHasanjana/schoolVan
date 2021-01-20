@@ -7,18 +7,19 @@ import '../widgets/body_splash_screen.dart';
 import '../widgets/big_square_button.dart';
 import '../widgets/end_button.dart';
 import '../widgets/circle_button.dart';
+import 'my_kids_screen.dart';
 import 'parent_list_screen.dart';
 import 'payment_list_screen.dart';
 import 'student_list_screen.dart';
 
-class DriverOverviewScreen extends StatelessWidget {
+class ParentOverviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
         appBar: AppBar(
           backgroundColor: kPrimaryColor,
-          title: Text('I\'m a driver.....'),
+          title: Text('I\'m a parent.....'),
         ),
         body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,29 +56,29 @@ class DriverOverviewScreen extends StatelessWidget {
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.of(context).pushNamed(
-                                          SelectRouteScreen.routeName,
-                                          arguments: 'Home');
+                                          MyKidsScreen.routeName,
+                                          arguments: 'Track');
                                     },
                                     child: Container(
                                       width: 170,
                                       height: 250,
                                       child: BigSquareButton(
-                                          'https://tlgur.com/d/GaydY7aG',
-                                          'Pick up from Home'),
+                                          'https://picsum.photos/250?image=9',
+                                          'Track my kids'),
                                     ),
                                   ),
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.of(context).pushNamed(
                                           SelectRouteScreen.routeName,
-                                          arguments: 'School');
+                                          arguments: 'Payment');
                                     },
                                     child: Container(
                                       width: 170,
                                       height: 250,
                                       child: BigSquareButton(
-                                          'https://tlgur.com/d/GozbXZY8',
-                                          'Pick up from School'),
+                                          'https://picsum.photos/250?image=9',
+                                          'Do a payment'),
                                     ),
                                   ),
                                 ],
@@ -96,7 +97,7 @@ class DriverOverviewScreen extends StatelessWidget {
                                       },
                                       child: CircleButton(
                                           'https://picsum.photos/250?image=9',
-                                          'Students details'),
+                                          'children\'s details'),
                                     ),
                                     GestureDetector(
                                       onTap: () {
@@ -105,7 +106,7 @@ class DriverOverviewScreen extends StatelessWidget {
                                       },
                                       child: CircleButton(
                                           'https://picsum.photos/250?image=9',
-                                          'Parents details'),
+                                          'My        details'),
                                     ),
                                     GestureDetector(
                                       onTap: () {
@@ -114,7 +115,7 @@ class DriverOverviewScreen extends StatelessWidget {
                                       },
                                       child: CircleButton(
                                           'https://picsum.photos/250?image=9',
-                                          'Payment details'),
+                                          'Driver  details'),
                                     ),
                                   ],
                                 ),
@@ -127,7 +128,7 @@ class DriverOverviewScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              EndButton('Emergency', Colors.red),
+              EndButton('Call driver', Colors.red),
             ]));
   }
 }

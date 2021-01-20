@@ -13,27 +13,27 @@ class _BodyState extends State<BodySplashScreen> {
   List<Map<String, String>> splashData = [
     {
       "text": "Welcome to School van app",
-      "image": "https://tlgur.com/d/4yBoa1Z8"
+      "image": "https://tlgur.com/d/GWNZJEZ8"
     },
     {
       "text": "hadissi awasthawaladi demaupiyan danuwath kala haka.",
-      "image": "https://tlgur.com/d/4yBoAq28",
+      "image": "https://tlgur.com/d/89wvy7Kg",
     },
     {
       "text": "Daruwan sitina thena balaa gatha haka",
-      "image": "https://tlgur.com/d/gpzyRYd8 ",
+      "image": "https://tlgur.com/d/gj5A9ErG",
     },
     {
       "text": "Pahasuwen daruwan kalamanakaranaya karagatha haka",
-      "image": "https://tlgur.com/d/gpzyRYd8 ",
+      "image": "https://tlgur.com/d/GaydYPaG",
     },
     {
       "text": "Alert sewaa sakriya karagatha haka.",
-      "image": "https://tlgur.com/d/gpzyRYd8 ",
+      "image": "https://tlgur.com/d/GMAjPzWG",
     },
     {
       "text": "Pahasuwen payment kala haka.",
-      "image": "https://tlgur.com/d/gpzyRYd8 ",
+      "image": "https://tlgur.com/d/g05ENxa4",
     }
   ];
   @override

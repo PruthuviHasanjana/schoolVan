@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_van/screens/kid_details_screen.dart';
 import './screens/parent_details_screen.dart';
 import './screens/student_list_screen.dart';
 import './screens/parent_list_screen.dart';
@@ -8,6 +9,8 @@ import './screens/select_route_screen.dart';
 import './screens/student_details_screen.dart';
 
 import './screens/driver_overview_screen.dart';
+import 'screens/my_kids_screen.dart';
+import 'screens/parent_overview_screen.dart';
 import 'screens/payment_details_screen.dart';
 import 'screens/payment_list_screen.dart';
 
@@ -22,6 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: DriverOverviewScreen(),
+      // home: ParentOverviewScreen(),
       routes: {
         SelectRouteScreen.routeName: (ctx) => SelectRouteScreen(),
         DestinationScreen.routeName: (ctx) => DestinationScreen(),
@@ -31,6 +35,8 @@ class MyApp extends StatelessWidget {
         StudentListScreen.routeName: (ctx) => StudentListScreen(),
         ParentListScreen.routeName: (ctx) => ParentListScreen(),
         PaymentListScreen.routeName: (ctx) => PaymentListScreen(),
+        MyKidsScreen.routeName: (ctx) => MyKidsScreen(),
+        KidDetailsScreen.routeName: (ctx) => KidDetailsScreen(),
       },
     );
   }
